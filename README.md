@@ -1,8 +1,7 @@
 
 [![codecov](https://codecov.io/github/redis/redis/graph/badge.svg?token=6bVHb5fRuz)](https://codecov.io/github/redis/redis)
-hi i am developer
-
-env = 6789uhbvjhb9
+hi i am developer and important 
+env=6789uhbvjhb9
 
 This README is just a fast *quick start* document. You can find more detailed documentation at [redis.io](https://redis.io).
 
