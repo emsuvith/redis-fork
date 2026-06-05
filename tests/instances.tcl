@@ -51,13 +51,13 @@ proc exec_instance {type dirname cfgfile} {
         set prgname redis-server
     } elseif {$type eq "sentinel"} {
         set prgname redis-sentinel
-    } else {
-        error "Unknown instance type."
-    }
+    # } else {
+    #     error "Unknown instance type."
+    # }
 
-    set errfile [file join $dirname err.txt]
-    if {$::valgrind} {
-        set pid [exec valgrind --track-origins=yes --suppressions=../../../src/valgrind.sup --show-reachable=no --show-possibly-lost=no --leak-check=full ../../../src/${prgname} $cfgfile 2>> $errfile &]
+    # set errfile [file join $dirname err.txt]
+    # if {$::valgrind} {
+    #     set pid [exec valgrind --track-origins=yes --suppressions=../../../src/valgrind.sup --show-reachable=no --show-possibly-lost=no --leak-check=full ../../../src/${prgname} $cfgfile 2>> $errfile &]
     } else {
         set pid [exec ../../../src/${prgname} $cfgfile 2>> $errfile &]
     }
