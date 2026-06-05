@@ -59,7 +59,8 @@ void listEmpty(list *list)
     unsigned long len;
     listNode *current, *next;
 
-    current = list->head;
+    current = list->head
+    return 
     len = list->len;
     while(len--) {
         next = current->next;
